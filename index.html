@@ -1,120 +1,193 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portiva Logistics</title>
-  <style>
-    body {font-family: Arial; margin:0; background:#f4f4f4; direction:rtl;}
-    header {background:#0b3d91; color:white; padding:15px; display:flex; justify-content:space-between; align-items:center;}
-    header img {height:60px;}
-    nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
-    .lang {cursor:pointer; background:#ff7a00; padding:5px 10px; border-radius:5px;}
-    .hero {background:linear-gradient(rgba(11,61,145,0.8), rgba(11,61,145,0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d'); background-size:cover; color:white; padding:100px 20px; text-align:center;}
-    .hero h2 {font-size:42px;}
-    .btn {background:#ff7a00; color:white; padding:12px 25px; text-decoration:none; margin:10px; display:inline-block; border-radius:5px;}
-    .section {padding:50px 20px; text-align:center;}
-    .services {display:flex; flex-wrap:wrap; justify-content:center;}
-    .card {background:white; margin:10px; padding:25px; width:230px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); font-weight:bold; transition:0.3s;}
-    .card:hover {transform:translateY(-10px);}    
-    form {max-width:500px; margin:auto; text-align:right;}
-    input, textarea, select {width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;}
-    button {background:#0b3d91; color:white; padding:12px; border:none; width:100%; border-radius:5px; font-size:16px;}
-    .testimonials {display:flex; flex-wrap:wrap; justify-content:center;}
-    .testimonial {background:white; margin:10px; padding:20px; width:250px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}    
-    footer {background:#222; color:white; text-align:center; padding:20px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portiva Logistics</title>
+
+<style>
+body {font-family: Arial; margin:0; direction:rtl; background:#f5f5f5; scroll-behavior:smooth;}
+
+header {
+background:#0b3d91;
+color:#fff;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header img {height:60px;}
+
+nav a {
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover {color:#ff7a00;}
+
+.hero {
+background:linear-gradient(rgba(11,61,145,0.8),rgba(11,61,145,0.8)),
+url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');
+background-size:cover;
+color:#fff;
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1 {font-size:40px;}
+
+.section {padding:60px 20px; text-align:center;}
+
+.services {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card {
+background:white;
+margin:10px;
+padding:25px;
+width:220px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover {transform:translateY(-10px);}
+
+input, textarea {
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button {
+background:#0b3d91;
+color:#fff;
+padding:12px;
+border:none;
+cursor:pointer;
+width:220px;
+border-radius:5px;
+}
+
+.whatsapp-btn {
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+}
+
+footer {
+background:#222;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <img src="logo.png" alt="Portiva Logo">
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">من نحن</a>
-    <a href="#">الخدمات</a>
-    <a href="#">تواصل</a>
-  </nav>
-  <div class="lang" onclick="toggleLang()">EN</div>
+<img src="logo.png" alt="Portiva Logo">
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#about">من نحن</a>
+<a href="#services">الخدمات</a>
+<a href="#quote">عرض سعر</a>
+<a href="#contact">تواصل</a>
+</nav>
 </header>
 
-<section class="hero">
-  <h2 id="title">حلول شحن عالمية من أي مكان إلى أي مكان</h2>
-  <p id="desc">شحن دولي - نقل داخلي - تخليص جمركي</p>
-  <a class="btn" href="#quote">اطلب عرض سعر</a>
+<!-- HOME -->
+<section id="home" class="hero">
+<h1>Portiva Logistics</h1>
+<h2>شحن من أي مكان إلى أي مكان</h2>
+<p>شحن دولي - نقل داخلي - تخليص جمركي</p>
 </section>
 
-<section class="section">
-  <h2>خدماتنا</h2>
-  <div class="services">
-    <div class="card">🚢 الشحن البحري</div>
-    <div class="card">✈️ الشحن الجوي</div>
-    <div class="card">🚚 النقل الداخلي</div>
-    <div class="card">📦 التخليص الجمركي</div>
-  </div>
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2>من نحن</h2>
+<p>
+Portiva Logistics شركة متخصصة في الشحن الدولي والنقل والتخليص الجمركي، 
+نقدم خدمات احترافية من أي مكان في العالم إلى أي وجهة بأعلى كفاءة.
+</p>
 </section>
 
-<section class="section testimonials">
-  <div class="testimonial">خدمة ممتازة وسرعة في التنفيذ</div>
-  <div class="testimonial">أفضل شركة تعاملت معاها في الشحن</div>
-  <div class="testimonial">متابعة مستمرة وأسعار كويسة</div>
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>الخدمات</h2>
+<div class="services">
+<div class="card">🚢 شحن بحري</div>
+<div class="card">✈️ شحن جوي</div>
+<div class="card">🚚 نقل داخلي</div>
+<div class="card">📦 تخليص جمركي</div>
+</div>
 </section>
 
-<section class="section" id="quote">
-  <h2>اطلب عرض سعر</h2>
-  <form id="quoteForm">
-    <input type="text" placeholder="الاسم" required>
-    <input type="tel" placeholder="رقم الهاتف" required>
-    <select>
-      <option>نوع الشحنة</option>
-      <option>بحري</option>
-      <option>جوي</option>
-    </select>
-    <input type="text" placeholder="من أين">
-    <input type="text" placeholder="إلى أين">
-    <textarea placeholder="تفاصيل إضافية"></textarea>
-    <button type="button" onclick="sendWhatsApp()">إرسال عبر واتساب</button>
-  </form>
+<!-- QUOTE -->
+<section id="quote" class="section">
+<h2>اطلب عرض سعر</h2>
+
+<input id="name" type="text" placeholder="الاسم">
+<input id="phone" type="text" placeholder="رقم الهاتف">
+<input id="from" type="text" placeholder="من أين">
+<input id="to" type="text" placeholder="إلى أين">
+<textarea id="details" placeholder="تفاصيل الشحنة"></textarea>
+
+<br>
+
+<button onclick="send()">إرسال عبر واتساب</button>
 </section>
 
-<section class="section">
-  <h2>تواصل معنا</h2>
-  <p>📱 01204646350</p>
-  <p>📧 portivalogistics1@gmail.com</p>
-  <p>📍 الإسكندرية - باب 10</p>
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>تواصل معنا</h2>
+<p>📱 01204646350</p>
+<p>📧 portivalogistics1@gmail.com</p>
+<p>📍 الإسكندرية - باب 10</p>
 </section>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-btn" href="https://wa.me/201204646350" target="_blank">💬</a>
 
 <footer>
-  <p>© 2026 Portiva Logistics</p>
+© 2026 Portiva Logistics
 </footer>
 
 <script>
-function sendWhatsApp() {
-  let inputs = document.querySelectorAll('#quoteForm input, #quoteForm textarea');
-  let message = "طلب عرض سعر:%0A";
-  inputs.forEach(input => {
-    message += input.placeholder + ": " + input.value + "%0A";
-  });
-  window.open("https://wa.me/201204646350?text=" + message, "_blank");
+function send(){
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let from = document.getElementById("from").value;
+let to = document.getElementById("to").value;
+let details = document.getElementById("details").value;
 
-  let email = "portivalogistics1@gmail.com";
-  let subject = "طلب عرض سعر";
-  let body = decodeURIComponent(message.replace(/%0A/g, "\\n"));
-  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-}
+let msg = `طلب عرض سعر:
+الاسم: ${name}
+رقم الهاتف: ${phone}
+من: ${from}
+إلى: ${to}
+تفاصيل: ${details}`;
 
-let isArabic = true;
-function toggleLang(){
-  if(isArabic){
-    document.getElementById('title').innerText = 'Global Shipping From Anywhere to Anywhere';
-    document.getElementById('desc').innerText = 'Shipping - Transport - Customs Clearance';
-    document.querySelector('.lang').innerText = 'AR';
-  } else {
-    document.getElementById('title').innerText = 'حلول شحن عالمية من أي مكان إلى أي مكان';
-    document.getElementById('desc').innerText = 'شحن دولي - نقل داخلي - تخليص جمركي';
-    document.querySelector('.lang').innerText = 'EN';
-  }
-  isArabic = !isArabic;
+let url = "https://wa.me/201204646350?text=" + encodeURIComponent(msg);
+window.open(url);
 }
 </script>
 
