@@ -10,7 +10,6 @@
 <style>
 body {margin:0; font-family:Arial; direction:rtl; background:#f4f6f9;}
 
-/* NAVBAR */
 header {
 background:#0b3d91;
 color:#fff;
@@ -18,9 +17,6 @@ padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 nav a {
@@ -40,18 +36,25 @@ padding:160px 20px;
 overflow:hidden;
 }
 
+/* الكرة الأرضية بتلف */
 .hero::before {
 content:"";
 position:absolute;
 top:50%;
 left:50%;
-width:350px;
-height:350px;
+width:320px;
+height:320px;
 background:url('logo.png.png') no-repeat center;
 background-size:contain;
 transform:translate(-50%,-50%);
 animation:spin 25s linear infinite;
-opacity:0.15;
+opacity:0.2;
+}
+
+/* اللوجو ثابت */
+.hero img {
+width:200px;
+margin-bottom:15px;
 }
 
 @keyframes spin {
@@ -62,19 +65,18 @@ opacity:0.15;
 /* SECTIONS */
 .section {padding:70px 20px; text-align:center;}
 
-.services {
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
 }
 
 .card {
 background:white;
-margin:15px;
-padding:30px;
-width:230px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+padding:20px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
@@ -82,44 +84,26 @@ transition:0.3s;
 transform:translateY(-10px);
 }
 
-.card i {
-font-size:40px;
-color:#0b3d91;
-margin-bottom:10px;
-transition:0.3s;
-}
-
-.card:hover i {
-color:#ff7a00;
-transform:scale(1.2);
-}
-
-/* GALLERY */
-.gallery {
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.gallery img {
-width:300px;
+.card img {
+width:100%;
 height:200px;
 object-fit:cover;
-margin:10px;
 border-radius:10px;
-transition:0.3s;
 }
 
-.gallery img:hover {
-transform:scale(1.1);
+/* ICONS */
+.card i {
+font-size:35px;
+color:#0b3d91;
+margin-bottom:10px;
 }
 
 /* FORM */
 input, select, textarea {
 width:90%;
-padding:12px;
+padding:10px;
 margin:10px;
-border-radius:6px;
+border-radius:5px;
 border:1px solid #ccc;
 }
 
@@ -130,7 +114,6 @@ padding:12px;
 border:none;
 width:220px;
 cursor:pointer;
-border-radius:5px;
 }
 
 /* WHATSAPP */
@@ -142,16 +125,7 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:20px;
 text-decoration:none;
-}
-
-/* FOOTER */
-footer {
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
 }
 </style>
 </head>
@@ -162,99 +136,97 @@ padding:20px;
 <h2>Portiva</h2>
 <nav>
 <a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
 <a href="#services">الخدمات</a>
-<a href="#gallery">أعمالنا</a>
+<a href="#work">أعمالنا</a>
 <a href="#quote">عرض سعر</a>
-<a href="#contact">تواصل</a>
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="home">
+<img src="logo.png.png">
 <h1>Portiva Logistics</h1>
 <p>التخليص الجمركي والنقل من جميع الموانئ</p>
 </section>
 
-<section class="section" id="about">
-<h2>من نحن</h2>
-<p>شركة متخصصة في التخليص الجمركي والنقل الداخلي بخبرة قوية في جميع الموانئ.</p>
-<p>نتعامل مع حاويات 20 و40 قدم ونوفر أفضل الأسعار وأسرع تنفيذ.</p>
-</section>
-
+<!-- SERVICES -->
 <section class="section" id="services">
-<h2>الخدمات</h2>
+<h2>خدماتنا</h2>
 
-<div class="services">
-<div class="card"><i class="fas fa-box"></i><br> التخليص الجمركي</div>
-<div class="card"><i class="fas fa-truck"></i><br> نقل الحاويات</div>
-<div class="card"><i class="fas fa-warehouse"></i><br> خدمات الميناء</div>
-<div class="card"><i class="fas fa-ship"></i><br> شحن دولي</div>
+<div class="grid">
+<div class="card"><i class="fas fa-box"></i><h3>التخليص الجمركي</h3></div>
+<div class="card"><i class="fas fa-truck"></i><h3>نقل الحاويات</h3></div>
+<div class="card"><i class="fas fa-ship"></i><h3>خدمات الميناء</h3></div>
 </div>
 
 </section>
 
-<section class="section" id="gallery">
-<h2>أعمالنا</h2>
+<!-- WORK -->
+<section class="section" id="work">
+<h2>أعمالنا من أرض الواقع</h2>
 
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
-<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
-<img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55">
-<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+<div class="grid">
+
+<div class="card">
+<img src="file_000000005eb8720c84a30e6243b7c357.png">
+<p>نقل حاويات من الميناء</p>
+</div>
+
+<div class="card">
+<img src="file_000000006b90720ca311c028a5d93980.png">
+<p>متابعة الشحنات بالمخازن</p>
+</div>
+
+<div class="card">
+<img src="file_00000000774c722fa9d41b6a034602c1.png">
+<p>شحن بحري وجوي</p>
+</div>
+
+<div class="card">
+<img src="file_000000002d7071f5b477efbfbc7e6019.png">
+<p>تنظيم الحاويات</p>
+</div>
+
+<div class="card">
+<img src="file_000000009abc71f58b510b97219141f3.png">
+<p>تحميل وتفريغ</p>
+</div>
+
+<div class="card">
+<img src="file_000000004e24720cb8ac3b61e579a663.png">
+<p>موانئ وشحنات</p>
+</div>
+
+<div class="card">
+<img src="file_00000000d81c720cbdf3150373187cbd.png">
+<p>إدارة الشحنات عالميًا</p>
+</div>
+
 </div>
 
 </section>
 
+<!-- QUOTE -->
 <section class="section" id="quote">
 <h2>طلب عرض سعر</h2>
 
-<input id="name" placeholder="الاسم">
-<input id="phone" placeholder="رقم الهاتف">
+<input placeholder="الاسم">
+<input placeholder="رقم الهاتف">
 
-<select id="container">
+<select>
 <option>نوع الحاوية</option>
 <option>20 قدم</option>
 <option>40 قدم</option>
 </select>
 
-<input id="count" placeholder="عدد الحاويات">
+<input placeholder="عدد الحاويات">
 
-<textarea id="details" placeholder="تفاصيل"></textarea>
+<textarea placeholder="تفاصيل"></textarea>
 
-<button onclick="send()">إرسال واتساب</button>
-</section>
-
-<section class="section" id="contact">
-<h2>تواصل معنا</h2>
-<p>📱 01204646350</p>
-<p>📧 portivalogistics1@gmail.com</p>
-<p>📍 الإسكندرية - باب 10</p>
+<button>إرسال واتساب</button>
 </section>
 
 <a class="whatsapp" href="https://wa.me/201204646350">💬</a>
-
-<footer>
-© 2026 Portiva Logistics
-</footer>
-
-<script>
-function send(){
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let container = document.getElementById("container").value;
-let count = document.getElementById("count").value;
-let details = document.getElementById("details").value;
-
-let msg = `طلب تخليص:
-الاسم: ${name}
-رقم الهاتف: ${phone}
-نوع الحاوية: ${container}
-عدد الحاويات: ${count}
-تفاصيل: ${details}`;
-
-window.open("https://wa.me/201204646350?text=" + encodeURIComponent(msg));
-}
-</script>
 
 </body>
 </html>
