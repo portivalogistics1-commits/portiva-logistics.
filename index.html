@@ -6,7 +6,7 @@
 <title>Portiva Logistics</title>
 
 <style>
-body {font-family: Arial; margin:0; direction:rtl; background:#f5f5f5; scroll-behavior:smooth;}
+body {font-family: Arial; margin:0; direction:rtl; background:#f5f5f5;}
 
 header {
 background:#0b3d91;
@@ -17,7 +17,6 @@ justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
-z-index:1000;
 }
 
 header img {height:60px;}
@@ -27,25 +26,13 @@ color:white;
 margin:0 10px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
-
-nav a:hover {color:#ff7a00;}
 
 .hero {
-background:linear-gradient(rgba(11,61,145,0.7),rgba(11,61,145,0.7)), url('logo.png.png');
-background-size:500px;
-background-repeat:no-repeat;
-background-position:center;
-color:#fff;
+background:#0b3d91;
+color:white;
 text-align:center;
-padding:140px 20px;
-animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn {
-from {opacity:0; transform:translateY(30px);} 
-to {opacity:1; transform:translateY(0);} 
+padding:120px 20px;
 }
 
 .section {padding:60px 20px; text-align:center;}
@@ -58,36 +45,26 @@ justify-content:center;
 
 .card {
 background:white;
-margin:15px;
-padding:30px;
+margin:10px;
+padding:25px;
 width:230px;
-border-radius:15px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
-transition:0.4s;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-transform:translateY(-15px) scale(1.05);
-}
-
-.images {
+.gallery {
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 }
 
-.images img {
+.gallery img {
 width:300px;
 margin:10px;
 border-radius:10px;
-transition:0.4s;
 }
 
-.images img:hover {
-transform:scale(1.1);
-}
-
-input, textarea {
+input, select, textarea {
 width:90%;
 padding:10px;
 margin:10px;
@@ -97,15 +74,13 @@ border:1px solid #ccc;
 
 button {
 background:#0b3d91;
-color:#fff;
+color:white;
 padding:12px;
 border:none;
-cursor:pointer;
 width:220px;
-border-radius:5px;
 }
 
-.whatsapp-btn {
+.whatsapp {
 position:fixed;
 bottom:20px;
 left:20px;
@@ -113,20 +88,13 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
-animation:float 2s infinite;
-}
-
-@keyframes float {
-0% {transform:translateY(0);} 
-50% {transform:translateY(-10px);} 
-100% {transform:translateY(0);} 
+font-size:20px;
 }
 
 footer {
 background:#222;
-color:#fff;
+color:white;
 text-align:center;
 padding:20px;
 }
@@ -141,7 +109,7 @@ padding:20px;
 <a href="#home">الرئيسية</a>
 <a href="#about">من نحن</a>
 <a href="#services">الخدمات</a>
-<a href="#gallery">معرض</a>
+<a href="#gallery">أعمالنا</a>
 <a href="#quote">عرض سعر</a>
 <a href="#contact">تواصل</a>
 </nav>
@@ -149,42 +117,63 @@ padding:20px;
 
 <section id="home" class="hero">
 <h1>Portiva Logistics</h1>
-<h2>شحن عالمي احترافي</h2>
-<p>حلول شحن - نقل - تخليص جمركي</p>
+<h2>التخليص الجمركي والنقل من وإلى جميع الموانئ</h2>
+<p>خبرة - سرعة - أمان</p>
 </section>
 
 <section id="about" class="section">
 <h2>من نحن</h2>
-<p>شركة Portiva Logistics تقدم خدمات شحن احترافية من أي مكان في العالم إلى أي وجهة بسرعة وأمان.</p>
+<p>
+شركة Portiva Logistics متخصصة في التخليص الجمركي والنقل الداخلي والدولي،
+نمتلك خبرة كبيرة في التعامل مع جميع أنواع الشحنات داخل وخارج مصر.
+</p>
+<p>
+نقدم خدماتنا من ميناء الإسكندرية وجميع الموانئ المصرية،
+ونتعامل مع جميع أنواع الحاويات (20 قدم - 40 قدم) والبضائع المختلفة.
+</p>
+<p>
+نهدف إلى تسهيل الإجراءات على عملائنا وتقديم أفضل الأسعار وأسرع وقت تنفيذ.
+</p>
 </section>
 
 <section id="services" class="section">
 <h2>الخدمات</h2>
 <div class="services">
-<div class="card">🚢 شحن بحري</div>
-<div class="card">✈️ شحن جوي</div>
-<div class="card">🚚 نقل داخلي</div>
-<div class="card">📦 تخليص جمركي</div>
+<div class="card">📦 التخليص الجمركي</div>
+<div class="card">🚚 نقل الحاويات</div>
+<div class="card">🏢 خدمات الميناء</div>
+<div class="card">🌍 شحن دولي (خدمة إضافية)</div>
 </div>
 </section>
 
 <section id="gallery" class="section">
-<h2>شغلنا</h2>
-<div class="images">
-<img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-<img src="https://images.unsplash.com/photo-1581091870627-3a46a8b2f3c1">
+<h2>أعمالنا من أرض الواقع</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59">
+<img src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8">
+<img src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2">
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+<img src="https://images.unsplash.com/photo-1598514982841-6c3b7c0e1d2a">
 </div>
 </section>
 
 <section id="quote" class="section">
-<h2>اطلب عرض سعر</h2>
-<input id="name" type="text" placeholder="الاسم">
-<input id="phone" type="text" placeholder="رقم الهاتف">
-<input id="from" type="text" placeholder="من أين">
-<input id="to" type="text" placeholder="إلى أين">
-<textarea id="details" placeholder="تفاصيل"></textarea>
-<br>
+<h2>طلب عرض سعر للتخليص الجمركي</h2>
+
+<input id="name" placeholder="الاسم">
+<input id="phone" placeholder="رقم الهاتف">
+
+<select id="container">
+<option>نوع الحاوية</option>
+<option>20 قدم</option>
+<option>40 قدم</option>
+</select>
+
+<input id="count" placeholder="عدد الحاويات">
+
+<textarea id="details" placeholder="تفاصيل إضافية"></textarea>
+
 <button onclick="send()">إرسال عبر واتساب</button>
 </section>
 
@@ -195,24 +184,28 @@ padding:20px;
 <p>📍 الإسكندرية - باب 10</p>
 </section>
 
-<a class="whatsapp-btn" href="https://wa.me/201204646350" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/201204646350" target="_blank">💬</a>
 
 <footer>
-© 2026 Portiva Logistics
+© Portiva Logistics
 </footer>
 
 <script>
 function send(){
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
-let from = document.getElementById("from").value;
-let to = document.getElementById("to").value;
+let container = document.getElementById("container").value;
+let count = document.getElementById("count").value;
 let details = document.getElementById("details").value;
 
-let msg = `طلب عرض سعر:\nالاسم: ${name}\nرقم الهاتف: ${phone}\nمن: ${from}\nإلى: ${to}\nتفاصيل: ${details}`;
+let msg = `طلب تخليص جمركي:
+الاسم: ${name}
+رقم الهاتف: ${phone}
+نوع الحاوية: ${container}
+عدد الحاويات: ${count}
+تفاصيل: ${details}`;
 
-let url = "https://wa.me/201204646350?text=" + encodeURIComponent(msg);
-window.open(url);
+window.open("https://wa.me/201204646350?text=" + encodeURIComponent(msg));
 }
 </script>
 
