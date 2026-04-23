@@ -4,110 +4,168 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<title>Portiva Logistics</title>
-</head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portiva Logistics</title>
 
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body{margin:0;font-family:'Tahoma',sans-serif;direction:rtl;background:#f4f6f9;color:#222}
+body {
+margin:0;
+font-family:Arial;
+direction:rtl;
+background:#f4f6f9;
+}
 
 /* NAV */
-.hero {
-background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55');
-background-size: cover;
-background-position: center;
-color: white;
-text-align: center;
-padding: 160px 20px;
+header {
+background:#0b3d91;
+color:#fff;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
-background:rgba(0,0,0,0.7);
-color:#fff;padding:15px 30px;
-display:flex;justify-content:space-between;
-z-index:1000;
+
+nav a {
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
 }
-nav a{color:#fff;margin:0 10px;text-decoration:none}
 
 /* HERO */
-.hero{
+.hero {
 height:100vh;
-background:url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7') center/cover;
-display:flex;align-items:center;justify-content:center;
-text-align:center;color:#fff;position:relative;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
 }
-.hero::after{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.7)}
-.hero-content{position:relative;z-index:2}
-.hero img{width:260px;margin-bottom:15px;animation:spin 15s linear infinite}
-@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
-.hero h1{font-size:45px;margin:10px 0}
+
+.hero img {
+width:220px;
+margin-bottom:20px;
+animation:spin 25s linear infinite;
+}
+
+@keyframes spin {
+0% {transform:rotate(0deg);}
+100% {transform:rotate(360deg);}
+}
+
+.hero h1 {
+font-size:40px;
+margin:10px;
+text-shadow:0 0 10px rgba(0,0,0,0.7);
+}
+
+.hero p {
+text-shadow:0 0 10px rgba(0,0,0,0.7);
+}
 
 /* SECTION */
-.section{padding:80px 20px;text-align:center}
-.section h2{margin-bottom:30px}
+.section {
+padding:70px 20px;
+text-align:center;
+}
+
+h2 {
+margin-bottom:30px;
+}
 
 /* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.services {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
-.service{
-background:#fff;padding:30px;border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-cursor:pointer;transition:.3s;
-}
-.service:hover{transform:translateY(-10px)}
-.service i{font-size:45px;color:#0b3d91;margin-bottom:15px}
 
-/* ABOUT */
-.about{
-max-width:900px;margin:auto;line-height:1.8;font-size:18px
+.card {
+background:white;
+margin:15px;
+padding:25px;
+width:220px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-10px);
+}
+
+.card i {
+font-size:40px;
+color:#0b3d91;
+margin-bottom:10px;
 }
 
 /* GALLERY */
-.gallery{
+.gallery {
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
 }
-.gallery img{
-width:100%;height:230px;object-fit:cover;
+
+.gallery img {
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.gallery img:hover {
+transform:scale(1.05);
 }
 
 /* FORM */
-input,select,textarea{
-width:90%;padding:12px;margin:10px;
-border-radius:5px;border:1px solid #ccc;
-}
-button{
-background:#ff7a00;color:#fff;padding:12px 25px;
-border:none;cursor:pointer;border-radius:5px;
+input, select, textarea {
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
-/* POPUP */
-.popup{
-display:none;position:fixed;
-top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.7);
-justify-content:center;align-items:center;
+button {
+background:#0b3d91;
+color:white;
+padding:12px;
+border:none;
+width:220px;
+cursor:pointer;
+border-radius:5px;
 }
-.popup-content{
-background:#fff;padding:30px;border-radius:10px;
-width:90%;max-width:500px;position:relative;
-}
-.close{position:absolute;left:10px;top:5px;cursor:pointer}
 
 /* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;left:20px;
-background:#25D366;color:#fff;
-padding:15px;border-radius:50%;
+.whatsapp {
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 text-decoration:none;
+font-size:20px;
+}
+
+/* FOOTER */
+footer {
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
 }
 </style>
 </head>
@@ -117,62 +175,55 @@ text-decoration:none;
 <header>
 <h2>Portiva</h2>
 <nav>
+<a href="#home">الرئيسية</a>
 <a href="#services">الخدمات</a>
-<a href="#about">معلومات عنا</a>
-<a href="#work">أعمالنا</a>
+<a href="#gallery">أعمالنا</a>
 <a href="#quote">عرض سعر</a>
 </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-<div class="hero-content">
+<section class="hero" id="home">
 <img src="logo.png.png">
 <h1>Portiva Logistics</h1>
-<p>التخليص الجمركي • الشحن الدولي • النقل</p>
-</div>
+<p>التخليص الجمركي والنقل من جميع الموانئ</p>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
 <h2>خدماتنا</h2>
+
 <div class="services">
 
-<div class="service" onclick="openBox('customs')">
-<i class="fas fa-file-invoice"></i>
+<div class="card">
+<i class="fa-solid fa-ship"></i>
 <h3>التخليص الجمركي</h3>
-<p>إنهاء كامل للإجراءات بسرعة</p>
 </div>
 
-<div class="service" onclick="openBox('shipping')">
-<i class="fas fa-plane"></i>
-<h3>الشحن الدولي</h3>
-<p>شحن بحري وجوي</p>
+<div class="card">
+<i class="fa-solid fa-truck"></i>
+<h3>نقل الحاويات</h3>
 </div>
 
-<div class="service" onclick="openBox('transport')">
-<i class="fas fa-truck"></i>
-<h3>النقل الداخلي</h3>
-<p>نقل حاويات لجميع المحافظات</p>
+<div class="card">
+<i class="fa-solid fa-warehouse"></i>
+<h3>خدمات الميناء</h3>
 </div>
 
+<div class="card">
+<i class="fa-solid fa-box"></i>
+<h3>إدارة الشحنات</h3>
 </div>
-</section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-<h2>معلومات عنا</h2>
-<div class="about">
-شركة Portiva Logistics متخصصة في التخليص الجمركي داخل جميع الموانئ،
-ونقدم خدمات الشحن الدولي والنقل الداخلي.
-نتميز بالسرعة والدقة والالتزام ونخدم جميع أنواع الحاويات والبضائع.
 </div>
 </section>
 
 <!-- GALLERY -->
-<section class="section" id="work">
-<h2>أعمالنا</h2>
-<div class="gallery"><img src="img1.jpg">
+<section class="section" id="gallery">
+<h2>أعمالنا من أرض الواقع</h2>
+
+<div class="gallery">
+<img src="img1.jpg">
 <img src="img2.jpg">
 <img src="img3.jpg">
 <img src="img4.jpg">
@@ -180,6 +231,7 @@ text-decoration:none;
 <img src="img6.jpg">
 <img src="img7.jpg">
 </div>
+
 </section>
 
 <!-- QUOTE -->
@@ -189,69 +241,41 @@ text-decoration:none;
 <input id="name" placeholder="الاسم">
 <input id="phone" placeholder="رقم الهاتف">
 
-<select id="type">
+<select id="container">
+<option>نوع الحاوية</option>
 <option>20 قدم</option>
 <option>40 قدم</option>
 </select>
 
 <input id="count" placeholder="عدد الحاويات">
+
 <textarea id="details" placeholder="تفاصيل"></textarea>
 
 <button onclick="send()">إرسال واتساب</button>
 </section>
 
-<!-- POPUP -->
-<div id="popup" class="popup">
-<div class="popup-content">
-<div class="close" onclick="closeBox()">×</div>
-<div id="popupText"></div>
-<a id="whatsappBtn" target="_blank">تواصل واتساب</a>
-</div>
-</div>
-
 <a class="whatsapp" href="https://wa.me/201204646350">💬</a>
 
+<footer>
+© 2026 Portiva Logistics
+</footer>
+
 <script>
-function openBox(type){
-let text="",msg="";
-
-if(type=="customs"){
-text="<h3>التخليص الجمركي</h3><p>تخليص 20 و40 - إنهاء كامل الإجراءات</p>";
-msg="استفسار عن التخليص الجمركي";
-}
-if(type=="shipping"){
-text="<h3>الشحن الدولي</h3><p>شحن بحري وجوي لجميع الدول</p>";
-msg="استفسار عن الشحن";
-}
-if(type=="transport"){
-text="<h3>النقل الداخلي</h3><p>نقل الحاويات داخل مصر</p>";
-msg="استفسار عن النقل";
-}
-
-document.getElementById("popupText").innerHTML=text;
-document.getElementById("popup").style.display="flex";
-document.getElementById("whatsappBtn").href="https://wa.me/201204646350?text="+encodeURIComponent(msg);
-}
-
-function closeBox(){
-document.getElementById("popup").style.display="none";
-}
-
 function send(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let type=document.getElementById("type").value;
-let count=document.getElementById("count").value;
-let details=document.getElementById("details").value;
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let container = document.getElementById("container").value;
+let count = document.getElementById("count").value;
+let details = document.getElementById("details").value;
 
-let msg=`طلب عرض سعر:
-${name}
-${phone}
-${type}
-عدد: ${count}
-${details}`;
+let msg = `طلب تخليص:
+الاسم: ${name}
+رقم الهاتف: ${phone}
+نوع الحاوية: ${container}
+عدد الحاويات: ${count}
+تفاصيل: ${details}`;
 
-window.open("https://wa.me/201204646350?text="+encodeURIComponent(msg));
+window.open("https://wa.me/201204646350?text=" + encodeURIComponent(msg));
 }
 </script>
 
