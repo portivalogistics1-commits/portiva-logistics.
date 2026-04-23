@@ -6,166 +6,159 @@
 
 <title>Portiva Logistics</title>
 
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
+body{
 margin:0;
 font-family:Arial;
 direction:rtl;
-background:#f4f6f9;
+background:#0a1f3c;
+color:#fff;
 }
 
 /* NAV */
-header {
-background:#0b3d91;
-color:#fff;
-padding:15px;
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.6);
 display:flex;
 justify-content:space-between;
-align-items:center;
+padding:15px 40px;
+z-index:1000;
 }
 
-nav a {
-color:white;
-margin:0 10px;
+nav a{
+color:#fff;
+margin:0 15px;
 text-decoration:none;
-font-weight:bold;
 }
 
 /* HERO */
-.hero {
+.hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55');
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
+url('img1.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
-flex-direction:column;
 align-items:center;
-justify-content:center;
-text-align:center;
+justify-content:space-between;
+padding:100px 60px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+margin-bottom:20px;
+}
+
+.btn{
+background:#0b5ed7;
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
 color:#fff;
 }
 
-.hero img {
-width:220px;
-margin-bottom:20px;
+/* LOGO */
+.logo{
+width:200px;
 animation:spin 25s linear infinite;
 }
 
-@keyframes spin {
-0% {transform:rotate(0deg);}
-100% {transform:rotate(360deg);}
-}
-
-.hero h1 {
-font-size:40px;
-margin:10px;
-text-shadow:0 0 10px rgba(0,0,0,0.7);
-}
-
-.hero p {
-text-shadow:0 0 10px rgba(0,0,0,0.7);
-}
-
-/* SECTION */
-.section {
-padding:70px 20px;
-text-align:center;
-}
-
-h2 {
-margin-bottom:30px;
+@keyframes spin{
+0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
 }
 
 /* SERVICES */
-.services {
+.services{
+background:#0b2a50;
+padding:50px;
 display:flex;
+justify-content:space-around;
 flex-wrap:wrap;
-justify-content:center;
 }
 
-.card {
-background:white;
-margin:15px;
-padding:25px;
-width:220px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+.card{
+background:#102f5c;
+padding:20px;
+width:200px;
+margin:10px;
+border-radius:10px;
+text-align:center;
 }
 
-.card:hover {
-transform:translateY(-10px);
-}
-
-.card i {
-font-size:40px;
-color:#0b3d91;
+.card i{
+font-size:35px;
 margin-bottom:10px;
 }
 
 /* GALLERY */
-.gallery {
+.gallery{
+padding:40px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
+gap:15px;
 }
 
-.gallery img {
+.gallery img{
 width:100%;
-height:220px;
+height:200px;
 object-fit:cover;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-transition:0.3s;
-}
-
-.gallery img:hover {
-transform:scale(1.05);
 }
 
 /* FORM */
-input, select, textarea {
-width:90%;
-padding:12px;
-margin:10px;
-border-radius:6px;
-border:1px solid #ccc;
+.form{
+background:#0b2a50;
+padding:40px;
+text-align:center;
 }
 
-button {
-background:#0b3d91;
-color:white;
-padding:12px;
+input,select{
+width:250px;
+padding:10px;
+margin:10px;
 border:none;
-width:220px;
-cursor:pointer;
 border-radius:5px;
 }
 
-/* WHATSAPP */
-.whatsapp {
+button{
+padding:12px 25px;
+background:#0b5ed7;
+color:#fff;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* WHATS */
+.whatsapp{
 position:fixed;
 bottom:20px;
 left:20px;
 background:#25D366;
-color:white;
 padding:15px;
 border-radius:50%;
-text-decoration:none;
+color:#fff;
 font-size:20px;
 }
 
 /* FOOTER */
-footer {
-background:#222;
-color:white;
+footer{
 text-align:center;
 padding:20px;
+background:#000;
 }
 </style>
 </head>
@@ -173,28 +166,26 @@ padding:20px;
 <body>
 
 <header>
-<h2>Portiva</h2>
+<div>PORTIVA</div>
 <nav>
-<a href="#home">الرئيسية</a>
-<a href="#services">الخدمات</a>
+<a href="#">الرئيسية</a>
+<a href="#services">خدماتنا</a>
 <a href="#gallery">أعمالنا</a>
-<a href="#quote">عرض سعر</a>
+<a href="#form">عرض سعر</a>
 </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<img src="logo.png.png">
-<h1>Portiva Logistics</h1>
+<section class="hero">
+<div class="hero-text">
+<h1>PORTIVA LOGISTICS</h1>
 <p>التخليص الجمركي والنقل من جميع الموانئ</p>
+<a class="btn" href="https://wa.me/201204646350">تواصل معنا</a>
+</div>
+
+<img src="logo.png.png" class="logo">
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-<h2>خدماتنا</h2>
-
-<div class="services">
-
+<section class="services" id="services">
 <div class="card">
 <i class="fa-solid fa-ship"></i>
 <h3>التخليص الجمركي</h3>
@@ -214,15 +205,9 @@ padding:20px;
 <i class="fa-solid fa-box"></i>
 <h3>إدارة الشحنات</h3>
 </div>
-
-</div>
 </section>
 
-<!-- GALLERY -->
-<section class="section" id="gallery">
-<h2>أعمالنا من أرض الواقع</h2>
-
-<div class="gallery">
+<section class="gallery" id="gallery">
 <img src="img1.jpg">
 <img src="img2.jpg">
 <img src="img3.jpg">
@@ -230,12 +215,9 @@ padding:20px;
 <img src="img5.jpg">
 <img src="img6.jpg">
 <img src="img7.jpg">
-</div>
-
 </section>
 
-<!-- QUOTE -->
-<section class="section" id="quote">
+<section class="form" id="form">
 <h2>طلب عرض سعر</h2>
 
 <input id="name" placeholder="الاسم">
@@ -249,15 +231,13 @@ padding:20px;
 
 <input id="count" placeholder="عدد الحاويات">
 
-<textarea id="details" placeholder="تفاصيل"></textarea>
-
 <button onclick="send()">إرسال واتساب</button>
 </section>
 
 <a class="whatsapp" href="https://wa.me/201204646350">💬</a>
 
 <footer>
-© 2026 Portiva Logistics
+© Portiva Logistics
 </footer>
 
 <script>
@@ -266,14 +246,12 @@ let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
 let container = document.getElementById("container").value;
 let count = document.getElementById("count").value;
-let details = document.getElementById("details").value;
 
 let msg = `طلب تخليص:
 الاسم: ${name}
 رقم الهاتف: ${phone}
 نوع الحاوية: ${container}
-عدد الحاويات: ${count}
-تفاصيل: ${details}`;
+عدد الحاويات: ${count}`;
 
 window.open("https://wa.me/201204646350?text=" + encodeURIComponent(msg));
 }
