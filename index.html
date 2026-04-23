@@ -9,163 +9,67 @@
 
 <style>
 html{scroll-behavior:smooth;}
-
-body{
-margin:0;
-font-family:Tajawal, Arial;
-direction:rtl;
-background:#0b1f3a;
-color:#fff;
-}
+body{margin:0;font-family:Tajawal,Arial;direction:rtl;background:#0b1f3a;color:#fff}
 
 /* NAV */
 header{
-position:absolute;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
-z-index:10;
+position:absolute;top:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 50px;z-index:10
 }
-
-nav a{
-color:#fff;
-margin:0 15px;
-text-decoration:none;
-font-size:15px;
-}
-
-.contact-btn{
-border:1px solid #fff;
-padding:8px 18px;
-border-radius:20px;
-}
+nav a{color:#fff;margin:0 15px;text-decoration:none}
+.contact-btn{border:1px solid #fff;padding:8px 18px;border-radius:20px}
 
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url('hero.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:100px 80px;
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7)),url('hero.jpg');
+background-size:cover;background-position:center;
+display:flex;align-items:center;justify-content:space-between;
+padding:100px 80px
 }
-
-.hero-text{
-max-width:500px;
-}
-
-.hero-text h1{
-font-size:55px;
-margin:0;
-}
-
-.hero-text p{
-margin:15px 0;
-font-size:18px;
-}
-
-.btn{
-background:#0b5ed7;
-padding:12px 25px;
-border-radius:25px;
-text-decoration:none;
-color:#fff;
-display:inline-block;
-}
+.hero-text{max-width:500px}
+.hero-text h1{font-size:55px;margin:0}
+.hero-text p{margin:15px 0}
+.btn{background:#0b5ed7;padding:12px 25px;border-radius:25px;color:#fff;text-decoration:none}
 
 /* LOGO */
-.logo{
-width:300px;
-}
+.logo{width:300px}
 
 /* SERVICES */
 .services{
-background:#0c2d57;
-margin-top:-80px;
-padding:30px;
-display:flex;
-justify-content:space-around;
-border-radius:20px;
-width:90%;
-margin-left:auto;
-margin-right:auto;
+background:#0c2d57;margin-top:-80px;padding:30px;
+display:flex;justify-content:space-around;border-radius:20px;
+width:90%;margin:auto;flex-wrap:wrap
 }
-
-.card{
-text-align:center;
-width:200px;
-}
-
-.card i{
-font-size:35px;
-margin-bottom:10px;
-}
+.card{text-align:center;width:200px;margin:10px}
+.card i{font-size:35px;margin-bottom:10px}
 
 /* GALLERY */
-.gallery{
-padding:40px;
-background:#fff;
-color:#000;
-text-align:center;
-}
-
-.gallery h2{
-margin-bottom:20px;
-}
-
-.images{
-display:flex;
-gap:10px;
-overflow:auto;
-}
-
-.images img{
-width:200px;
-height:120px;
-object-fit:cover;
-border-radius:10px;
-}
+.gallery{padding:40px;background:#fff;color:#000;text-align:center}
+.images{display:flex;gap:10px;overflow:auto}
+.images img{width:200px;height:120px;object-fit:cover;border-radius:10px}
 
 /* FORM */
-.form{
-background:#0b1f3a;
-padding:30px;
-text-align:center;
-}
-
-input,select{
-padding:10px;
-margin:10px;
-border:none;
-border-radius:5px;
-width:180px;
-}
-
-button{
-padding:10px 25px;
-background:#0b5ed7;
-color:#fff;
-border:none;
-border-radius:20px;
-}
+.form{background:#0b1f3a;padding:30px;text-align:center}
+input,select{padding:10px;margin:10px;border:none;border-radius:5px;width:180px}
+button{padding:10px 25px;background:#0b5ed7;color:#fff;border:none;border-radius:20px}
 
 /* ABOUT */
-.about{
-padding:50px;
-text-align:center;
-background:#0c2d57;
-}
+.about{padding:50px;text-align:center;background:#0c2d57}
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:15px;
-background:#000;
+footer{text-align:center;padding:15px;background:#000}
+
+/* WELCOME */
+#welcomeBox{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,.8);display:flex;justify-content:center;
+align-items:center;flex-direction:column;z-index:9999
+}
+#welcomeBox button{
+margin-top:15px;padding:10px 25px;border:none;
+background:#0b5ed7;color:#fff;border-radius:20px
 }
 </style>
 </head>
@@ -179,7 +83,7 @@ background:#000;
 <a href="#hero">الرئيسية</a>
 <a href="#services">خدماتنا</a>
 <a href="#gallery">أعمالنا</a>
-<a href="#form">طلب عرض سعر</a>
+<a href="#form">عرض سعر</a>
 <a href="#about">من نحن</a>
 </nav>
 
@@ -187,34 +91,26 @@ background:#000;
 </header>
 
 <section class="hero" id="hero">
-
 <div class="hero-text">
 <h1>PORTIVA LOGISTICS</h1>
-<p>التخليص الجمركي والنقل من جميع الموانئ<br>بسرعة - أمان - احترافية</p>
-<a class="btn" href="https://wa.me/201204646350">تواصل معنا الآن</a>
+<p>التخليص الجمركي والنقل والشحن من جميع الموانئ</p>
+<a href="https://wa.me/201204646350?text=مرحبًا، أود الاستفسار عن خدماتكم" class="btn">واتساب</a>
 </div>
-
 <img src="logo.png.png" class="logo">
-
 </section>
 
 <section class="services" id="services">
-<div class="card"><i class="fa-solid fa-ship"></i><p>التخليص الجمركي</p></div>
-<div class="card"><i class="fa-solid fa-truck"></i><p>نقل الحاويات</p></div>
-<div class="card"><i class="fa-solid fa-warehouse"></i><p>خدمات الميناء</p></div>
-<div class="card"><i class="fa-solid fa-box"></i><p>إدارة الشحنات</p></div>
+<div class="card"><i class="fa-solid fa-ship"></i><p>تخليص جمركي (صادر / وارد)</p></div>
+<div class="card"><i class="fa-solid fa-truck"></i><p>نقل الحاويات والتريلات</p></div>
+<div class="card"><i class="fa-solid fa-globe"></i><p>شحن دولي</p></div>
+<div class="card"><i class="fa-solid fa-warehouse"></i><p>خدمات الموانئ</p></div>
 </section>
 
 <section class="gallery" id="gallery">
-<h2>أعمالنا من أرض الواقع</h2>
+<h2>أعمالنا</h2>
 <div class="images">
-<img src="img1.jpg">
-<img src="img2.jpg">
-<img src="img3.jpg">
-<img src="img4.jpg">
-<img src="img5.jpg">
-<img src="img6.jpg">
-<img src="img7.jpg">
+<img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg">
+<img src="img4.jpg"><img src="img5.jpg"><img src="img6.jpg"><img src="img7.jpg">
 </div>
 </section>
 
@@ -230,24 +126,46 @@ background:#000;
 <input id="count" placeholder="عدد الحاويات">
 <br>
 <button onclick="send()">إرسال</button>
+<p id="doneMsg" style="display:none;color:lightgreen;">✔ تم إرسال طلبك</p>
 </section>
 
 <section class="about" id="about">
-<h2>من نحن</h2>
-<p>
-نحن شركة Portiva Logistics متخصصون في التخليص الجمركي ونقل الحاويات من جميع الموانئ.
-نقدم خدمات احترافية بسرعة وأمان مع خبرة كبيرة في مجال اللوجستيات.
-</p>
+<h2>تواصل معنا</h2>
+<p>📞 01204646350</p>
+<p>📧 portivalogistics1@gmail.com</p>
+<p>📍 الإسكندرية - باب 10</p>
+<a href="https://wa.me/201204646350" class="btn">واتساب</a>
+<a href="mailto:portivalogistics1@gmail.com" class="btn">إيميل</a>
 </section>
 
-<footer>
-© Portiva Logistics
-</footer>
+<footer>© Portiva Logistics</footer>
+
+<!-- WELCOME -->
+<div id="welcomeBox">
+<p>👋 مرحبًا بك في Portiva Logistics</p>
+<button onclick="closeWelcome()">دخول</button>
+</div>
 
 <script>
+function closeWelcome(){
+document.getElementById("welcomeBox").style.display="none";
+}
+
 function send(){
-let msg = "طلب عرض سعر";
-window.open("https://wa.me/201204646350?text="+msg);
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let type=document.getElementById("type").value;
+let count=document.getElementById("count").value;
+
+let msg=`طلب عرض سعر:
+الاسم: ${name}
+الهاتف: ${phone}
+نوع الحاوية: ${type}
+العدد: ${count}`;
+
+document.getElementById("doneMsg").style.display="block";
+
+window.open("https://wa.me/201204646350?text="+encodeURIComponent(msg));
 }
 </script>
 
