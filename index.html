@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portiva Logistics</title>
 
-<style>
-body {font-family: Arial; margin:0; direction:rtl; background:#f5f5f5;}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+<style>
+body {margin:0; font-family:Arial; direction:rtl; background:#f4f6f9;}
+
+/* NAVBAR */
 header {
 background:#0b3d91;
 color:#fff;
@@ -17,9 +20,8 @@ justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
+z-index:1000;
 }
-
-header img {height:60px;}
 
 nav a {
 color:white;
@@ -28,14 +30,37 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* HERO */
 .hero {
+position:relative;
 background:#0b3d91;
 color:white;
 text-align:center;
-padding:120px 20px;
+padding:160px 20px;
+overflow:hidden;
 }
 
-.section {padding:60px 20px; text-align:center;}
+.hero::before {
+content:"";
+position:absolute;
+top:50%;
+left:50%;
+width:350px;
+height:350px;
+background:url('logo.png.png') no-repeat center;
+background-size:contain;
+transform:translate(-50%,-50%);
+animation:spin 25s linear infinite;
+opacity:0.15;
+}
+
+@keyframes spin {
+0% {transform:translate(-50%,-50%) rotate(0deg);}
+100% {transform:translate(-50%,-50%) rotate(360deg);}
+}
+
+/* SECTIONS */
+.section {padding:70px 20px; text-align:center;}
 
 .services {
 display:flex;
@@ -45,13 +70,31 @@ justify-content:center;
 
 .card {
 background:white;
-margin:10px;
-padding:25px;
+margin:15px;
+padding:30px;
 width:230px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
+.card:hover {
+transform:translateY(-10px);
+}
+
+.card i {
+font-size:40px;
+color:#0b3d91;
+margin-bottom:10px;
+transition:0.3s;
+}
+
+.card:hover i {
+color:#ff7a00;
+transform:scale(1.2);
+}
+
+/* GALLERY */
 .gallery {
 display:flex;
 flex-wrap:wrap;
@@ -60,15 +103,23 @@ justify-content:center;
 
 .gallery img {
 width:300px;
+height:200px;
+object-fit:cover;
 margin:10px;
 border-radius:10px;
+transition:0.3s;
 }
 
+.gallery img:hover {
+transform:scale(1.1);
+}
+
+/* FORM */
 input, select, textarea {
 width:90%;
-padding:10px;
+padding:12px;
 margin:10px;
-border-radius:5px;
+border-radius:6px;
 border:1px solid #ccc;
 }
 
@@ -78,8 +129,11 @@ color:white;
 padding:12px;
 border:none;
 width:220px;
+cursor:pointer;
+border-radius:5px;
 }
 
+/* WHATSAPP */
 .whatsapp {
 position:fixed;
 bottom:20px;
@@ -88,10 +142,11 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-text-decoration:none;
 font-size:20px;
+text-decoration:none;
 }
 
+/* FOOTER */
 footer {
 background:#222;
 color:white;
@@ -104,7 +159,7 @@ padding:20px;
 <body>
 
 <header>
-<img src="logo.png.png">
+<h2>Portiva</h2>
 <nav>
 <a href="#home">الرئيسية</a>
 <a href="#about">من نحن</a>
@@ -115,51 +170,43 @@ padding:20px;
 </nav>
 </header>
 
-<section id="home" class="hero">
+<section class="hero" id="home">
 <h1>Portiva Logistics</h1>
-<h2>التخليص الجمركي والنقل من وإلى جميع الموانئ</h2>
-<p>خبرة - سرعة - أمان</p>
+<p>التخليص الجمركي والنقل من جميع الموانئ</p>
 </section>
 
-<section id="about" class="section">
+<section class="section" id="about">
 <h2>من نحن</h2>
-<p>
-شركة Portiva Logistics متخصصة في التخليص الجمركي والنقل الداخلي والدولي،
-نمتلك خبرة كبيرة في التعامل مع جميع أنواع الشحنات داخل وخارج مصر.
-</p>
-<p>
-نقدم خدماتنا من ميناء الإسكندرية وجميع الموانئ المصرية،
-ونتعامل مع جميع أنواع الحاويات (20 قدم - 40 قدم) والبضائع المختلفة.
-</p>
-<p>
-نهدف إلى تسهيل الإجراءات على عملائنا وتقديم أفضل الأسعار وأسرع وقت تنفيذ.
-</p>
+<p>شركة متخصصة في التخليص الجمركي والنقل الداخلي بخبرة قوية في جميع الموانئ.</p>
+<p>نتعامل مع حاويات 20 و40 قدم ونوفر أفضل الأسعار وأسرع تنفيذ.</p>
 </section>
 
-<section id="services" class="section">
+<section class="section" id="services">
 <h2>الخدمات</h2>
+
 <div class="services">
-<div class="card">📦 التخليص الجمركي</div>
-<div class="card">🚚 نقل الحاويات</div>
-<div class="card">🏢 خدمات الميناء</div>
-<div class="card">🌍 شحن دولي (خدمة إضافية)</div>
+<div class="card"><i class="fas fa-box"></i><br> التخليص الجمركي</div>
+<div class="card"><i class="fas fa-truck"></i><br> نقل الحاويات</div>
+<div class="card"><i class="fas fa-warehouse"></i><br> خدمات الميناء</div>
+<div class="card"><i class="fas fa-ship"></i><br> شحن دولي</div>
 </div>
+
 </section>
 
-<section id="gallery" class="section">
-<h2>أعمالنا من أرض الواقع</h2>
+<section class="section" id="gallery">
+<h2>أعمالنا</h2>
+
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59">
-<img src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8">
-<img src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+<img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55">
 <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-<img src="https://images.unsplash.com/photo-1598514982841-6c3b7c0e1d2a">
 </div>
+
 </section>
 
-<section id="quote" class="section">
-<h2>طلب عرض سعر للتخليص الجمركي</h2>
+<section class="section" id="quote">
+<h2>طلب عرض سعر</h2>
 
 <input id="name" placeholder="الاسم">
 <input id="phone" placeholder="رقم الهاتف">
@@ -172,22 +219,22 @@ padding:20px;
 
 <input id="count" placeholder="عدد الحاويات">
 
-<textarea id="details" placeholder="تفاصيل إضافية"></textarea>
+<textarea id="details" placeholder="تفاصيل"></textarea>
 
-<button onclick="send()">إرسال عبر واتساب</button>
+<button onclick="send()">إرسال واتساب</button>
 </section>
 
-<section id="contact" class="section">
+<section class="section" id="contact">
 <h2>تواصل معنا</h2>
 <p>📱 01204646350</p>
 <p>📧 portivalogistics1@gmail.com</p>
 <p>📍 الإسكندرية - باب 10</p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/201204646350" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/201204646350">💬</a>
 
 <footer>
-© Portiva Logistics
+© 2026 Portiva Logistics
 </footer>
 
 <script>
@@ -198,7 +245,7 @@ let container = document.getElementById("container").value;
 let count = document.getElementById("count").value;
 let details = document.getElementById("details").value;
 
-let msg = `طلب تخليص جمركي:
+let msg = `طلب تخليص:
 الاسم: ${name}
 رقم الهاتف: ${phone}
 نوع الحاوية: ${container}
