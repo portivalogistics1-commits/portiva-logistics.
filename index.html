@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portiva Logistics</title>
+<title>Portiva Logistics | بورتيفا لوجستيكس</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -15,7 +15,7 @@ body{margin:0;font-family:Tajawal,Arial;direction:rtl;background:#0b1f3a;color:#
 header{
 position:absolute;top:0;width:100%;
 display:flex;justify-content:space-between;align-items:center;
-padding:20px 50px;z-index:10
+padding:20px 50px;z-index:10;box-sizing: border-box;
 }
 nav a{color:#fff;margin:0 15px;text-decoration:none}
 .contact-btn{border:1px solid #fff;padding:8px 18px;border-radius:20px}
@@ -31,7 +31,7 @@ padding:100px 80px
 .hero-text{max-width:500px}
 .hero-text h1{font-size:55px;margin:0}
 .hero-text p{margin:15px 0}
-.btn{background:#0b5ed7;padding:12px 25px;border-radius:25px;color:#fff;text-decoration:none}
+.btn{background:#0b5ed7;padding:12px 25px;border-radius:25px;color:#fff;text-decoration:none;display: inline-block;margin: 5px;}
 
 /* LOGO */
 .logo{width:300px}
@@ -40,36 +40,34 @@ padding:100px 80px
 .services{
 background:#0c2d57;margin-top:-80px;padding:30px;
 display:flex;justify-content:space-around;border-radius:20px;
-width:90%;margin:auto;flex-wrap:wrap
+width:90%;margin:auto;flex-wrap:wrap;box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .card{text-align:center;width:200px;margin:10px}
-.card i{font-size:35px;margin-bottom:10px}
+.card i{font-size:35px;margin-bottom:10px;color: #0b5ed7;}
 
 /* GALLERY */
 .gallery{padding:40px;background:#fff;color:#000;text-align:center}
-.images{display:flex;gap:10px;overflow:auto}
-.images img{width:200px;height:120px;object-fit:cover;border-radius:10px}
+.images{display:flex;gap:10px;overflow:auto;padding: 20px 0;}
+.images img{width:250px;height:150px;object-fit:cover;border-radius:10px}
 
 /* FORM */
-.form{background:#0b1f3a;padding:30px;text-align:center}
-input,select{padding:10px;margin:10px;border:none;border-radius:5px;width:180px}
-button{padding:10px 25px;background:#0b5ed7;color:#fff;border:none;border-radius:20px}
+.form{background:#0b1f3a;padding:50px 20px;text-align:center}
+input,select{padding:12px;margin:10px;border:none;border-radius:5px;width:250px;max-width: 90%;}
+button{padding:12px 35px;background:#0b5ed7;color:#fff;border:none;border-radius:25px;cursor: pointer;font-weight: bold;}
 
 /* ABOUT */
-.about{padding:50px;text-align:center;background:#0c2d57}
+.about{padding:60px 20px;text-align:center;background:#0c2d57}
+.about p {font-size: 18px; margin: 10px 0;}
+.about i {margin-left: 10px; color: #0b5ed7;}
 
 /* FOOTER */
-footer{text-align:center;padding:15px;background:#000}
+footer{text-align:center;padding:20px;background:#000;font-size: 14px;}
 
 /* WELCOME */
 #welcomeBox{
 position:fixed;top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,.8);display:flex;justify-content:center;
+background:rgba(0,0,0,.9);display:flex;justify-content:center;
 align-items:center;flex-direction:column;z-index:9999
-}
-#welcomeBox button{
-margin-top:15px;padding:10px 25px;border:none;
-background:#0b5ed7;color:#fff;border-radius:20px
 }
 </style>
 </head>
@@ -77,37 +75,35 @@ background:#0b5ed7;color:#fff;border-radius:20px
 <body>
 
 <header>
-<div class="contact-btn">تواصل معنا</div>
-
+<div class="contact-btn">بورتيفا لوجستيكس</div>
 <nav>
 <a href="#hero">الرئيسية</a>
 <a href="#services">خدماتنا</a>
 <a href="#gallery">أعمالنا</a>
 <a href="#form">عرض سعر</a>
-<a href="#about">من نحن</a>
+<a href="#about">اتصل بنا</a>
 </nav>
-
-<div>PORTIVA</div>
+<div style="font-weight: bold; font-size: 20px; letter-spacing: 2px;">PORTIVA</div>
 </header>
 
 <section class="hero" id="hero">
 <div class="hero-text">
 <h1>PORTIVA LOGISTICS</h1>
-<p>التخليص الجمركي والنقل والشحن من جميع الموانئ</p>
-<a href="https://wa.me/201204646350?text=مرحبًا، أود الاستفسار عن خدماتكم" class="btn">واتساب</a>
+<p>حلول متكاملة للشحن والتخليص الجمركي من جميع الموانئ المصرية</p>
+<a href="https://wa.me/201204646350?text=مرحبًا، أود الاستفسار عن خدماتكم" class="btn"><i class="fab fa-whatsapp"></i> واتساب الشركه</a>
 </div>
-<img src="logo.png.png" class="logo">
+<img src="logo.png.png" class="logo" alt="Logo">
 </section>
 
 <section class="services" id="services">
 <div class="card"><i class="fa-solid fa-ship"></i><p>تخليص جمركي (صادر / وارد)</p></div>
 <div class="card"><i class="fa-solid fa-truck"></i><p>نقل الحاويات والتريلات</p></div>
-<div class="card"><i class="fa-solid fa-globe"></i><p>شحن دولي</p></div>
-<div class="card"><i class="fa-solid fa-warehouse"></i><p>خدمات الموانئ</p></div>
+<div class="card"><i class="fa-solid fa-globe"></i><p>شحن دولي (بحري / جوي)</p></div>
+<div class="card"><i class="fa-solid fa-warehouse"></i><p>خدمات واستشارات الموانئ</p></div>
 </section>
 
 <section class="gallery" id="gallery">
-<h2>أعمالنا</h2>
+<h2>أعمالنا في الميدان</h2>
 <div class="images">
 <img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg">
 <img src="img4.jpg"><img src="img5.jpg"><img src="img6.jpg"><img src="img7.jpg">
@@ -115,35 +111,38 @@ background:#0b5ed7;color:#fff;border-radius:20px
 </section>
 
 <section class="form" id="form">
-<h2>طلب عرض سعر</h2>
-<input id="name" placeholder="الاسم">
+<h2>طلب عرض سعر سريع</h2>
+<p>سجل بياناتك وسنتواصل معك فوراً</p>
+<input id="name" placeholder="الاسم بالكامل">
 <input id="phone" placeholder="رقم الهاتف">
 <select id="type">
-<option>نوع الحاوية</option>
+<option disabled selected>نوع الحاوية</option>
 <option>20 قدم</option>
 <option>40 قدم</option>
+<option>بضائع عامة</option>
 </select>
-<input id="count" placeholder="عدد الحاويات">
+<input id="count" placeholder="عدد الحاويات / الطرود">
 <br>
-<button onclick="send()">إرسال</button>
-<p id="doneMsg" style="display:none;color:lightgreen;">✔ تم إرسال طلبك</p>
+<button onclick="send()">إرسال الطلب</button>
+<p id="doneMsg" style="display:none;color:lightgreen;margin-top: 15px;">✔ تم إرسال طلبك بنجاح</p>
 </section>
 
 <section class="about" id="about">
 <h2>تواصل معنا</h2>
-<p>📞 01204646350</p>
-<p>📧 portivalogistics1@gmail.com</p>
-<p>📍 الإسكندرية - باب 10</p>
+<p><i class="fas fa-location-dot"></i> <strong>المقر الرئيسي:</strong> 398 طريق الحرية - برج الفنار {برج الأطباء} - الإسكندرية</p>
+<p><i class="fas fa-phone"></i> 01204646350</p>
+<p><i class="fas fa-envelope"></i> portivalogistics1@gmail.com</p>
+<p><i class="fas fa-clock"></i> متاحون لخدمتكم على مدار 24 ساعة</p>
+<br>
 <a href="https://wa.me/201204646350" class="btn">واتساب</a>
-<a href="mailto:portivalogistics1@gmail.com" class="btn">إيميل</a>
+<a href="mailto:portivalogistics1@gmail.com" class="btn">إرسال إيميل</a>
 </section>
 
-<footer>© Portiva Logistics</footer>
+<footer>© 2026 Portiva Logistics - جميع الحقوق محفوظة لشركة بورتيفا</footer>
 
-<!-- WELCOME -->
 <div id="welcomeBox">
-<p>👋 مرحبًا بك في Portiva Logistics</p>
-<button onclick="closeWelcome()">دخول</button>
+<p>👋 مرحبًا بك في بورتيفا لوجستيكس</p>
+<button onclick="closeWelcome()">دخول الموقع</button>
 </div>
 
 <script>
@@ -157,14 +156,18 @@ let phone=document.getElementById("phone").value;
 let type=document.getElementById("type").value;
 let count=document.getElementById("count").value;
 
-let msg=`طلب عرض سعر:
-الاسم: ${name}
-الهاتف: ${phone}
-نوع الحاوية: ${type}
-العدد: ${count}`;
+if(name=="" || phone==""){
+    alert("برجاء إدخال الاسم ورقم الهاتف");
+    return;
+}
+
+let msg=`طلب عرض سعر جديد (بورتيفا):
+👤 الاسم: ${name}
+📞 الهاتف: ${phone}
+📦 النوع: ${type}
+🔢 العدد: ${count}`;
 
 document.getElementById("doneMsg").style.display="block";
-
 window.open("https://wa.me/201204646350?text="+encodeURIComponent(msg));
 }
 </script>
